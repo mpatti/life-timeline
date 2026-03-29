@@ -100,117 +100,164 @@
       <section id="timeline" class="section-block">
         <div class="section-title-row">
           <div>
-            <p class="section-kicker">Main timeline</p>
+            <p class="section-kicker">Interactive timeline</p>
             <h2>The big life arc</h2>
           </div>
           <p class="section-copy max-copy">
-            A single, readable timeline of the major life phases — with the present moment and future seasons clearly marked.
+            Click any stop on the timeline to open the story behind it. The point is to make the whole journey understandable in seconds, not buried in blocks of text.
           </p>
         </div>
 
-        <div class="timeline-list">
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">~1980</span>
-              <span class="state-pill past">Past</span>
+        <div class="timeline-explorer glass" data-reveal>
+          <div class="timeline-explorer-top">
+            <div>
+              <p class="mini-helper handwritten">tap the glowing stops</p>
+              <h3>Life timeline explorer</h3>
             </div>
-            <h3>Early life</h3>
-            <p>Foundational upbringing, identity formation, and the early influences that shaped everything that followed.</p>
-          </article>
+            <div class="timeline-legend">
+              <span><i class="legend-dot past"></i> Past</span>
+              <span><i class="legend-dot now"></i> Today</span>
+              <span><i class="legend-dot future"></i> Future</span>
+            </div>
+          </div>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">1998</span>
-              <span class="state-pill past">Past</span>
-            </div>
-            <h3>Adult trajectory begins</h3>
-            <p>A major turning point as adulthood, responsibility, work, and direction start becoming real.</p>
-          </article>
+          <div class="timeline-rail-wrap">
+            <div class="timeline-rail"></div>
+            <div class="timeline-stops" role="tablist" aria-label="Life timeline milestones">
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="~1980" data-state="Past" data-state-class="past"
+                data-title="Early life"
+                data-body="Foundational upbringing, identity formation, and the early influences that shaped everything that followed."
+                data-focus="Roots, formation, identity"
+                data-note="The starting point of the whole story.">
+                <span class="stop-year">~1980</span>
+                <span class="stop-title">Early life</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">1998–2007</span>
-              <span class="state-pill past">Past</span>
-            </div>
-            <h3>Los Angeles years</h3>
-            <p>Move to Los Angeles, early career building, exploration, and the first larger chapter of opportunity.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="1998" data-state="Past" data-state-class="past"
+                data-title="Adult trajectory begins"
+                data-body="A major turning point as adulthood, responsibility, work, and direction start becoming real."
+                data-focus="Turning point"
+                data-note="The shift from preparation into real-world motion.">
+                <span class="stop-year">1998</span>
+                <span class="stop-title">Adult path begins</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">2000s–2010s</span>
-              <span class="state-pill past">Past</span>
-            </div>
-            <h3>Marriage, family, and business formation</h3>
-            <p>Marriage to Lynne, raising children, and growing music work and business ventures into something scalable.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="1998–2007" data-state="Past" data-state-class="past"
+                data-title="Los Angeles years"
+                data-body="Move to Los Angeles, early career building, exploration, and the first larger chapter of opportunity."
+                data-focus="Location + growth"
+                data-note="The first big outward chapter.">
+                <span class="stop-year">1998–2007</span>
+                <span class="stop-title">Los Angeles</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">2020–2025</span>
-              <span class="state-pill past">Past</span>
-            </div>
-            <h3>Charlotte transition</h3>
-            <p>A major life and business transition marked by relocation, reevaluation, and sharper focus on family, purpose, and structure.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="2000s–2010s" data-state="Past" data-state-class="past"
+                data-title="Marriage, family, and business formation"
+                data-body="Marriage to Lynne, raising children, and growing music work and business ventures into something scalable."
+                data-focus="Marriage, kids, business"
+                data-note="Family and vocation become intertwined.">
+                <span class="stop-year">2000s–2010s</span>
+                <span class="stop-title">Family + business</span>
+              </button>
 
-          <article class="timeline-card glass featured-now">
-            <div class="timeline-top">
-              <span class="timeline-year">2025–2026</span>
-              <span class="state-pill now">Today</span>
-            </div>
-            <h3>Current position</h3>
-            <p>Living in Charlotte, leading a family-centered life, and moving from operator mode toward owner / visionary mode.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="2020–2025" data-state="Past" data-state-class="past"
+                data-title="Charlotte transition"
+                data-body="A major life and business transition marked by relocation, reevaluation, and sharper focus on family, purpose, and structure."
+                data-focus="Transition"
+                data-note="A reset chapter, not just a move.">
+                <span class="stop-year">2020–2025</span>
+                <span class="stop-title">Charlotte transition</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">2027</span>
-              <span class="state-pill future">Future</span>
-            </div>
-            <h3>Liquidity-event target</h3>
-            <p>A hoped-for business milestone tied to Musio or a larger exit event, creating greater flexibility for the years beyond.</p>
-          </article>
+              <button class="timeline-stop stop-now is-active" role="tab" aria-selected="true"
+                data-era="2025–2026" data-state="Today" data-state-class="now"
+                data-title="Current position"
+                data-body="Living in Charlotte, leading a family-centered life, and moving from operator mode toward owner / visionary mode."
+                data-focus="Where things stand now"
+                data-note="This is the current chapter and the anchor for the rest of the page.">
+                <span class="stop-year">2025–2026</span>
+                <span class="stop-title">Today</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">2028+</span>
-              <span class="state-pill future">Future</span>
-            </div>
-            <h3>Invest + give</h3>
-            <p>The long-term shift from primarily earning to managing, stewarding, investing, and giving.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="2027" data-state="Future" data-state-class="future"
+                data-title="Liquidity-event target"
+                data-body="A hoped-for business milestone tied to Musio or a larger exit event, creating greater flexibility for the years beyond."
+                data-focus="Business milestone"
+                data-note="A hoped-for pivot point, not the end goal.">
+                <span class="stop-year">2027</span>
+                <span class="stop-title">Liquidity target</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">2030s–2050s</span>
-              <span class="state-pill future">Future</span>
-            </div>
-            <h3>Influence phase</h3>
-            <p>Business influence, mentorship, family expansion, and stewardship all become more visible and far-reaching.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="2028+" data-state="Future" data-state-class="future"
+                data-title="Invest + give"
+                data-body="The long-term shift from primarily earning to managing, stewarding, investing, and giving."
+                data-focus="Stewardship"
+                data-note="The money story becomes a stewardship story.">
+                <span class="stop-year">2028+</span>
+                <span class="stop-title">Invest + give</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">2060+</span>
-              <span class="state-pill future">Future</span>
-            </div>
-            <h3>Legacy & wisdom transfer</h3>
-            <p>Family, giving, meaning, and passing on perspective increasingly define the later years.</p>
-          </article>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="2030s–2050s" data-state="Future" data-state-class="future"
+                data-title="Influence phase"
+                data-body="Business influence, mentorship, family expansion, and stewardship all become more visible and far-reaching."
+                data-focus="Mentorship + impact"
+                data-note="Influence grows outward through people, not just projects.">
+                <span class="stop-year">2030s–2050s</span>
+                <span class="stop-title">Influence phase</span>
+              </button>
 
-          <article class="timeline-card glass">
-            <div class="timeline-top">
-              <span class="timeline-year">~2080</span>
-              <span class="state-pill future">Future</span>
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="2060+" data-state="Future" data-state-class="future"
+                data-title="Legacy & wisdom transfer"
+                data-body="Family, giving, meaning, and passing on perspective increasingly define the later years."
+                data-focus="Legacy"
+                data-note="What was built gets handed forward.">
+                <span class="stop-year">2060+</span>
+                <span class="stop-title">Legacy transfer</span>
+              </button>
+
+              <button class="timeline-stop" role="tab" aria-selected="false"
+                data-era="~2080" data-state="Future" data-state-class="future"
+                data-title="End-of-life reflection"
+                data-body="The deepest measure becomes faithfulness, family, and lasting impact — not just accomplishment."
+                data-focus="Final measure"
+                data-note="The question becomes: what endured?">
+                <span class="stop-year">~2080</span>
+                <span class="stop-title">Reflection</span>
+              </button>
             </div>
-            <h3>End-of-life reflection</h3>
-            <p>The deepest measure becomes faithfulness, family, and lasting impact — not just accomplishment.</p>
+          </div>
+
+          <article class="timeline-pop glass-dark" id="timeline-pop" aria-live="polite">
+            <div class="timeline-pop-top">
+              <span class="timeline-year" id="timeline-pop-era">2025–2026</span>
+              <span class="state-pill now" id="timeline-pop-state">Today</span>
+            </div>
+            <h3 id="timeline-pop-title">Current position</h3>
+            <p id="timeline-pop-body">Living in Charlotte, leading a family-centered life, and moving from operator mode toward owner / visionary mode.</p>
+            <div class="timeline-pop-meta">
+              <div class="pop-meta-block">
+                <span class="meta-label">Focus</span>
+                <strong id="timeline-pop-focus">Where things stand now</strong>
+              </div>
+              <div class="pop-meta-block">
+                <span class="meta-label">Why it matters</span>
+                <strong id="timeline-pop-note">This is the current chapter and the anchor for the rest of the page.</strong>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="family" class="glass section-card">
+      <section id="family" class="glass section-card" data-reveal>
         <div class="section-head">
           <div>
             <p class="section-kicker">Family milestones</p>
@@ -265,7 +312,7 @@
         </div>
       </section>
 
-      <section id="business" class="grid two-up finance-grid">
+      <section id="business" class="grid two-up finance-grid" data-reveal>
         <article class="glass card">
           <p class="section-kicker">Business & finances</p>
           <h2>Near-term financial picture</h2>
@@ -303,7 +350,7 @@
         </article>
       </section>
 
-      <section id="beliefs" class="grid two-up beliefs-grid">
+      <section id="beliefs" class="grid two-up beliefs-grid" data-reveal>
         <article class="glass card scripture-card">
           <p class="section-kicker">Foundational beliefs</p>
           <h2>Guiding principles</h2>
@@ -332,7 +379,7 @@
         </article>
       </section>
 
-      <section class="glass quote-block">
+      <section class="glass quote-block" data-reveal>
         <p>“I have been young, and now am old…”</p>
         <span>The aim is to look back and see God’s faithfulness across the whole arc.</span>
       </section>
@@ -341,5 +388,54 @@
     <footer class="site-footer shell">
       <p>Designed as a clear, living life timeline — readable at a glance, personal on purpose.</p>
     </footer>
+
+    <script>
+      const stops = document.querySelectorAll('.timeline-stop');
+      const eraEl = document.getElementById('timeline-pop-era');
+      const stateEl = document.getElementById('timeline-pop-state');
+      const titleEl = document.getElementById('timeline-pop-title');
+      const bodyEl = document.getElementById('timeline-pop-body');
+      const focusEl = document.getElementById('timeline-pop-focus');
+      const noteEl = document.getElementById('timeline-pop-note');
+      const popEl = document.getElementById('timeline-pop');
+
+      function activateStop(stop) {
+        stops.forEach((btn) => {
+          btn.classList.remove('is-active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+
+        stop.classList.add('is-active');
+        stop.setAttribute('aria-selected', 'true');
+
+        eraEl.textContent = stop.dataset.era;
+        stateEl.textContent = stop.dataset.state;
+        stateEl.className = 'state-pill ' + stop.dataset.stateClass;
+        titleEl.textContent = stop.dataset.title;
+        bodyEl.textContent = stop.dataset.body;
+        focusEl.textContent = stop.dataset.focus;
+        noteEl.textContent = stop.dataset.note;
+
+        popEl.classList.remove('pulse-in');
+        void popEl.offsetWidth;
+        popEl.classList.add('pulse-in');
+      }
+
+      stops.forEach((stop) => {
+        stop.addEventListener('click', () => activateStop(stop));
+      });
+
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
+
+      revealItems.forEach((item) => observer.observe(item));
+    </script>
   </body>
 </html>
