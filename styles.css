@@ -361,6 +361,27 @@ body::before {
   gap: 1rem;
 }
 
+.milestone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.milestone-year {
+  display: inline-flex;
+  margin-bottom: 0.45rem;
+  padding: 0.38rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  color: #ffe0b5;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.family-future-card h3 {
+  margin: 0.15rem 0 0.35rem;
+}
+
 .whiteboard-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -433,9 +454,10 @@ body::before {
 
 .timeline-item.highlight,
 .timeline-item.today-highlight,
-.finance-highlight {
-  border-color: rgba(123, 220, 255, 0.35);
-  box-shadow: 0 24px 70px rgba(123, 220, 255, 0.08);
+.finance-highlight,
+.family-milestone {
+  border-color: rgba(255, 217, 168, 0.32);
+  box-shadow: 0 24px 70px rgba(255, 196, 132, 0.08);
 }
 
 .year {
@@ -512,7 +534,8 @@ body::before {
   .pillar-grid,
   .vision-grid,
   .metric-stack,
-  .whiteboard-grid {
+  .whiteboard-grid,
+  .milestone-grid {
     grid-template-columns: 1fr;
   }
 
