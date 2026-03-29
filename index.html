@@ -35,66 +35,45 @@
     </header>
 
     <main class="shell">
-      <section class="hero glass">
-        <div class="hero-copy">
-          <p class="eyebrow">What this is</p>
-          <h1>A clear map of Mike and Lynne Patti’s life story.</h1>
-          <p class="lede">
-            This page lays out the big picture at a glance: early life, marriage and family,
-            business growth, financial milestones, and the long legacy arc still ahead.
-          </p>
-
-          <div class="hero-tags">
-            <span class="chip">🙏 Faith</span>
-            <span class="chip">👨‍👩‍👧‍👦 Family</span>
-            <span class="chip">🎼 Business</span>
-            <span class="chip">🪙 Stewardship</span>
-            <span class="chip">🌅 Legacy</span>
+      <section class="overview-panel glass" data-reveal>
+        <div class="overview-top">
+          <div class="overview-title">
+            <p class="eyebrow">Life Timeline</p>
+            <h1>Past → Present → Future</h1>
           </div>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#timeline">Start with the timeline</a>
-            <a class="btn btn-secondary" href="#today">Jump to today</a>
-          </div>
-        </div>
-
-        <aside class="hero-side glass-dark">
-          <div class="whiteboard-frame">
-            <img src="assets/original-whiteboard.jpg" alt="Original life timeline whiteboard" />
-          </div>
-          <p class="handwritten whiteboard-caption">the original whiteboard sketch</p>
-        </aside>
-      </section>
-
-      <section class="glass section-card read-this-first">
-        <div class="section-head tight">
-          <div>
-            <p class="section-kicker">How to read this page</p>
-            <h2>Past → Present → Future</h2>
-          </div>
-          <p class="section-copy">
-            Past milestones show what has already happened. Future milestones show the hoped-for
-            or likely family and life arc ahead.
+          <p class="section-copy overview-copy">
+            A clear map of Mike and Lynne Patti’s life story — family, work, faith, and the long life arc ahead.
           </p>
         </div>
 
         <div class="orientation-grid">
-          <article class="glass-sub">
+          <article class="glass-sub orientation-card">
             <span class="mini-label">Past</span>
             <h3>🌱 Formation</h3>
             <p>Early life, Los Angeles, marriage, family building, and business formation.</p>
           </article>
-          <article class="glass-sub today-box" id="today">
+          <article class="glass-sub orientation-card today-box" id="today">
             <span class="mini-label live">Today</span>
             <h3>📍 Charlotte season</h3>
             <p>Business transition, family-centered life, and a shift from operator to owner / visionary.</p>
           </article>
-          <article class="glass-sub">
+          <article class="glass-sub orientation-card">
             <span class="mini-label future">Future</span>
             <h3>🌟 Legacy years</h3>
             <p>Grandchildren, anniversaries, stewardship, mentorship, giving, and wisdom transfer.</p>
           </article>
         </div>
+      </section>
+
+      <section class="whiteboard-toggle-row" data-reveal>
+        <button class="ghost-link" id="toggle-whiteboard" type="button" aria-expanded="false" aria-controls="whiteboard-panel">See original whiteboard</button>
+      </section>
+
+      <section class="glass section-card whiteboard-panel" id="whiteboard-panel" hidden>
+        <div class="whiteboard-frame compact-frame">
+          <img src="assets/original-whiteboard.jpg" alt="Original life timeline whiteboard" />
+        </div>
+        <p class="handwritten whiteboard-caption">the original whiteboard sketch</p>
       </section>
 
       <section id="timeline" class="section-block">
@@ -393,6 +372,8 @@
       const focusEl = document.getElementById('timeline-pop-focus');
       const noteEl = document.getElementById('timeline-pop-note');
       const popEl = document.getElementById('timeline-pop');
+      const whiteboardToggle = document.getElementById('toggle-whiteboard');
+      const whiteboardPanel = document.getElementById('whiteboard-panel');
 
       function activateStop(stop) {
         stops.forEach((btn) => {
@@ -420,6 +401,21 @@
       stops.forEach((stop) => {
         stop.addEventListener('click', () => activateStop(stop));
       });
+
+      if (whiteboardToggle && whiteboardPanel) {
+        whiteboardToggle.addEventListener('click', () => {
+          const isHidden = whiteboardPanel.hasAttribute('hidden');
+          if (isHidden) {
+            whiteboardPanel.removeAttribute('hidden');
+            whiteboardToggle.setAttribute('aria-expanded', 'true');
+            whiteboardToggle.textContent = 'Hide original whiteboard';
+          } else {
+            whiteboardPanel.setAttribute('hidden', '');
+            whiteboardToggle.setAttribute('aria-expanded', 'false');
+            whiteboardToggle.textContent = 'See original whiteboard';
+          }
+        });
+      }
 
       const revealItems = document.querySelectorAll('[data-reveal]');
       const observer = new IntersectionObserver((entries) => {
