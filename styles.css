@@ -296,7 +296,8 @@ body::before {
 .orientation-grid,
 .milestone-grid,
 .metric-stack,
-.beliefs-grid {
+.beliefs-grid,
+.one-up {
   display: grid;
   gap: 1rem;
 }
