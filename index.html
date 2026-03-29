@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -35,20 +35,29 @@
       <section class="hero glass">
         <div class="hero-copy">
           <p class="eyebrow">Mike & Lynne Patti</p>
-          <h1>A life plan shaped by faith, family, stewardship, and long-term vision.</h1>
+          <h1>
+            A life plan shaped by faith, family, stewardship,
+            <span class="handwritten accent-script">and the long arc of legacy.</span>
+          </h1>
           <p class="lede">
-            A modern timeline view of life phases, business milestones, family priorities,
-            financial targets, and the bigger legacy arc.
+            A warmer, more personal timeline view of life phases, business milestones,
+            family priorities, financial targets, and the bigger story underneath all of it.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#timeline">View timeline</a>
-            <a class="btn btn-secondary" href="#principles">Guiding principles</a>
+            <a class="btn btn-secondary" href="#whiteboard">See the original whiteboard</a>
           </div>
         </div>
 
-        <div class="hero-panel glass-dark">
-          <p class="panel-label">Current focus</p>
+        <div class="hero-panel glass-dark photo-panel">
+          <div class="photo-frame">
+            <img src="assets/original-whiteboard.jpg" alt="Original life timeline whiteboard" />
+          </div>
+          <div class="photo-note">
+            <p class="panel-label">Original whiteboard</p>
+            <p class="handwritten note-line">the real sketch behind the timeline</p>
+          </div>
           <div class="today-card">
             <span class="today-dot"></span>
             <div>
@@ -65,6 +74,35 @@
               <span>Core lanes</span>
               <strong>Faith · Family · Finance · Vision</strong>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="whiteboard" class="glass section-card whiteboard-section">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">The starting point</p>
+            <h2>From whiteboard sketch to living document</h2>
+          </div>
+          <p class="section-copy">
+            The site starts with the original hand-drawn board — then translates it into a cleaner,
+            more readable timeline without losing the personal feel behind it.
+          </p>
+        </div>
+
+        <div class="whiteboard-grid">
+          <div class="whiteboard-photo glass-sub">
+            <img src="assets/original-whiteboard.jpg" alt="Original whiteboard timeline" />
+          </div>
+          <div class="whiteboard-copy glass-sub">
+            <p class="handwritten section-note">still feels like notes on a board</p>
+            <h3>Why this version feels friendlier</h3>
+            <ul class="clean-list">
+              <li>Warmer tone and softer colors</li>
+              <li>Subtle handwritten cues layered over the modern glass style</li>
+              <li>The original whiteboard preserved right on the page</li>
+              <li>A timeline that feels personal, not corporate</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -299,7 +337,7 @@
     </main>
 
     <footer class="site-footer shell">
-      <p>Designed as a living life-plan timeline — modern, reflective, and easy to extend.</p>
+      <p>Designed as a living life-plan timeline — modern, reflective, and a little more handwritten.</p>
     </footer>
   </body>
 </html>
