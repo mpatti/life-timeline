@@ -404,12 +404,12 @@ body::before {
 .timeline-stop {
   position: relative;
   z-index: 1;
-  min-height: 102px;
+  min-height: 118px;
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.09);
   background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
   color: white;
-  padding: 1.2rem 0.8rem 0.8rem;
+  padding: 0.95rem 0.8rem 0.8rem;
   text-align: left;
   cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
@@ -418,10 +418,10 @@ body::before {
 .timeline-stop::before {
   content: "";
   position: absolute;
-  top: 0.62rem;
-  left: 0.8rem;
-  width: 14px;
-  height: 14px;
+  top: 0.86rem;
+  right: 0.8rem;
+  width: 10px;
+  height: 10px;
   border-radius: 999px;
   background: linear-gradient(135deg, #dfe8ff, #ffffff);
   box-shadow: 0 0 0 6px rgba(255,255,255,0.05);
@@ -443,6 +443,18 @@ body::before {
 .timeline-stop.stop-now::before {
   background: linear-gradient(135deg, var(--now), #ffffff);
   box-shadow: 0 0 0 8px rgba(158,231,217,0.08), 0 0 22px rgba(158,231,217,0.55);
+}
+
+.stop-icon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  font-size: 1.05rem;
+  margin-bottom: 0.55rem;
 }
 
 .stop-year,
@@ -480,6 +492,22 @@ body::before {
   margin-bottom: 0.7rem;
 }
 
+.timeline-pop-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.pop-icon {
+  display: inline-flex;
+  width: 2.2rem;
+  height: 2.2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  font-size: 1.15rem;
+}
 .timeline-pop h3,
 .timeline-card h3 {
   margin: 0.1rem 0 0.55rem;
